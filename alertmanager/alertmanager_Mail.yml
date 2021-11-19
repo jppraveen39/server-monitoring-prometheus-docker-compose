@@ -1,0 +1,16 @@
+route:
+  group_by: [Alertname]
+  # Send all notifications to me.
+  receiver: email-me
+
+receivers:
+- name: email-me
+  email_configs:
+  - to: 'alerts-prod@winnovature.com'
+    from: alertprometheus01@gmail.com
+    smarthost: smtp.gmail.com:587
+    auth_username: alertprometheus01@gmail.com
+    auth_identity: alertprometheus01@gmail.com
+    auth_password: aajtzfoyryapjgjo
+    send_resolved: true
+
